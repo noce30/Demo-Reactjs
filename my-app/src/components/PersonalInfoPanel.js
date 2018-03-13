@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MaritalStatus from "../components/MaritalStatus";
 import SummaryInformation from "../components/SummaryInfo";
 
-
 const mockCustomer = {
     fullName: "John Doe",
     gender: "male",
