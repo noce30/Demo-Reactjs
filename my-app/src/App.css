@@ -27,3 +27,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.title-name{
+  color: #29317B;
+  font-weight: bold;
+}
+.field-info{
+  color: #29317B;
+  font-weight: bold;
+  text-transform: uppercase;
+}
