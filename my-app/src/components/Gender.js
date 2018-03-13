@@ -1,39 +1,31 @@
 import React, { Component } from 'react';
-import icon_female from '../assets/img/icons-demo/icon_female.png';
-import icon_male from '../assets/img/icons-demo/icon_male.png';
-import icon_select_gender from'../assets/img/icons-demo/icon_select_gender.png'
+import GenderShow from './GenderShow';
+import icon_select_gender from '../assets/img/icons-demo/icon_select_gender.png';
 
 class Gender extends Component {
     constructor(props) {
         super(props)
-        this.handleGender = this.handleGender.bind(this);
+        this.state = { showFull: false };
+        this.ClickGender = this.ClickGender.bind(this);
     }
 
-    handleGender(e)
-    {
-        this.props.onGenderChange(e.target.checked);
+    ClickGender() {
+        this.setState({
+            showFull: this.state.showFull ? false : true
+        });
     }
 
     render() {
         return (
-            <div className="item">
+            <div className="item" style={this.state.showFull ? { backgroundColor: "hotpink" } : null}>
                 <div className="left">
-                    <img src={icon_select_gender} alt="male" />
+                    <img src={icon_select_gender} alt="male" onClick={this.ClickGender} />
                 </div>
-                <div className="right">
-                    <img src={icon_female} alt="male" />
-                </div>
-
-                <div className="right-swith">
-                    <label className="switch">
-                        <input type="checkbox" checked={this.props.checked} onChange={this.handleGender}/>
-                        <span className="slider round"></span>
-                    </label>
-                </div>
-
-                <div className="right">
-                    <img src={icon_male} alt="male" />
-                </div>
+                <GenderShow
+                    showFull={this.state.showFull}
+                    onGenderChange={this.props.onGenderChange}
+                    checked={this.props.checked}
+                />
             </div>
         );
     }
