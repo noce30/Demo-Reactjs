@@ -81,7 +81,6 @@ input:checked + .slider:before {
 
 .item{
   margin-left: 20%;
-  background-color: hotpink;
   width: 350px;
   padding: 2px;
   border-radius: 35px;
@@ -99,6 +98,13 @@ input:checked + .slider:before {
 
 .item .left{
   float: left;
+}
+
+.item .text-title{
+  margin-left: 25px;
+  margin-top: 15px;
+  color: mediumblue;
+  font-size: 22px;
 }
 
 @keyframes App-logo-spin {
