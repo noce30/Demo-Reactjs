@@ -76,11 +76,6 @@
   filter: grayscale(100%);
 }
 
-.circle-container img::after {
-  content: "----";
-  color: red;
-}
-
 .circle-inner {
   position: relative;
   width: 40.5em;
@@ -112,27 +107,27 @@
 }
 
 .circle-inner > *:nth-of-type(1) {
-  transform: rotate(-20deg) translate(23.82353em) rotate(25deg);
+  transform: rotate(-20deg) translate(23.82353em);
 }
 
 .circle-inner > *:nth-of-type(2) {
-  transform: rotate(0.83333deg) translate(23.82353em) rotate(4.16667deg);
+  transform: rotate(0.83333deg) translate(23.82353em);
 }
 
 .circle-inner > *:nth-of-type(3) {
-  transform: rotate(21.66667deg) translate(23.82353em) rotate(-16.66667deg);
+  transform: rotate(21.66667deg) translate(23.82353em);
 }
 
 .circle-inner > *:nth-of-type(4) {
-  transform: rotate(42.5deg) translate(23.82353em) rotate(-37.5deg);
+  transform: rotate(42.5deg) translate(23.82353em);
 }
 
 .circle-inner > *:nth-of-type(5) {
-  transform: rotate(63.33333deg) translate(23.82353em) rotate(-58.33333deg);
+  transform: rotate(63.33333deg) translate(23.82353em);
 }
 
 .circle-inner > *:nth-of-type(6) {
-  transform: rotate(84.16667deg) translate(23.82353em) rotate(-79.16667deg);
+  transform: rotate(84.16667deg) translate(23.82353em);
 }
 
 .circle-inner img {
@@ -140,6 +135,16 @@
   cursor: pointer;
   max-width: 100%;
   transition: .15s;
+}
+
+.circle-inner li:before {
+  content: "";
+  border: 1px dashed blue;
+  width: 36px;
+  height: 1px;
+  position: absolute;
+  top: 13px;
+  left: 25px;
 }
 
 .ml-50 {
