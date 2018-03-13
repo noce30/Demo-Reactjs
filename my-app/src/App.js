@@ -21,17 +21,17 @@ class App extends Component {
 
   render() {
     return (
-      <form>
-        <div>
-          <PersonalInfoPanel />
-          <img src={this.state.checked ? icon_female : male} />
+      <div className="bg-image">
+      <div className="main-bg">
+        <PersonalInfoPanel />
+        <img src={this.state.checked ? icon_female : male} />
           <Gender
             onGenderChange={this.handleGender}
             checked={this.state.checked}
           />
-        </div>
-      </form>
-    )
+       </div>
+      </div>
+    );
   }
 
 }
