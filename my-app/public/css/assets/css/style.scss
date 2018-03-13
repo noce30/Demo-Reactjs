@@ -1,11 +1,11 @@
-.main-bg{   
+.main-bg {
     background-color: rgba($color: #ffffff, $alpha: 0.9);
     position: fixed;
     height: 100%;
     width: 100%;
 }
 
-.bg-image{
+.bg-image {
     background-image: url("../images/bangkok-thailand.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -13,4 +13,90 @@
     position: fixed;
     height: 100%;
     width: 100%;
+}
+
+@mixin on-circle($item-count,
+$circle-size,
+$item-size) {
+    position: relative;
+    width: $circle-size;
+    height: $circle-size;
+    padding: 0;
+    list-style: none;
+    >* {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -($item-size/ 2);
+        width: $item-size;
+        height: $item-size;
+        $angle: (250 / $item-count);
+        $rot: -40;
+        @for $i from 1 through $item-count {
+            &:nth-of-type(#{$i}) {
+                transform: rotate($rot*0.5deg) translate($circle-size / 1.7) rotate(($rot - 10)* -0.5deg);
+            }
+            $rot: $rot+$angle;
+        }
+    }
+}
+
+.circle-container {
+    @include on-circle($item-count: 6, $circle-size: 50em, $item-size: 4em);
+    margin: auto;
+    border: dashed 3px blue;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    img {
+        display: block;
+        cursor: pointer;
+        max-width: 100%;
+        filter: grayscale(0);
+        transition: .15s;
+        &:hover {
+            filter: grayscale(100%);
+        }
+    }
+    img::after {
+        content: "----";
+        color: red;
+    }
+}
+
+.circle-inner {
+    @include on-circle($item-count: 6, $circle-size: 40.5em, $item-size: 2em);
+    border: solid 3px blue;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    width: 48em;
+    height: 48em;
+    top: 1em;
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    img {
+        display: block;
+        cursor: pointer;
+        max-width: 100%;
+        transition: .15s;
+    }
+}
+
+.ml-50 {
+    margin-left: 50px;
+}
+
+.info-position {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%); // margin: auto;
+    width: 300px;
 }

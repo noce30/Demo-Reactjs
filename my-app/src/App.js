@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import logo from './logo.svg';
+import icon_female from './assets/img/icons-demo/icon_female.png';
+import icon_male from './assets/img/icons-demo/icon_male.png';
 import './App.css';
 import PersonalInfoPanel from "./components/PersonalInfoPanel";
-import icon_female from './assets/img/icons-demo/icon_female.png';
-import male from './assets/img/icons-demo/icon_male.png';
-import Gender from './components/Gender';
+import CurveOptions from "./components/CurveOptions";
+import Gender from "./components/Gender";
+
 
 class App extends Component {
   constructor() {
@@ -18,13 +20,16 @@ class App extends Component {
       checked: checked
     });
   }
-
+  
   render() {
     return (
       <div className="bg-image">
         <div className="main-bg">
-          <PersonalInfoPanel />
-          <img src={this.state.checked ? icon_female : male} />
+          <div className="info-position">
+            <PersonalInfoPanel />
+          </div>
+          <CurveOptions />
+          <img src={this.state.checked ? icon_female : icon_male} />
           <Gender
             onGenderChange={this.handleGender}
             checked={this.state.checked}
@@ -33,7 +38,6 @@ class App extends Component {
       </div>
     );
   }
-
 }
 
 
