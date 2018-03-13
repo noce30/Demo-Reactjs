@@ -9,18 +9,8 @@ import Gender from "./components/Gender";
 
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = { checked: true };
-    this.handleGender = this.handleGender.bind(this);
-  }
 
-  handleGender(checked) {
-    this.setState({
-      checked: checked
-    });
-  }
-  
+
   render() {
     return (
       <div className="bg-image">
@@ -29,11 +19,11 @@ class App extends Component {
             <PersonalInfoPanel />
           </div>
           <CurveOptions />
-          <img src={this.state.checked ? icon_female : icon_male} />
-          <Gender
+          {/* <img src={this.state.checked ? icon_female : icon_male} /> */}
+          {/* <Gender
             onGenderChange={this.handleGender}
             checked={this.state.checked}
-          />
+          /> */}
         </div>
       </div>
     );
