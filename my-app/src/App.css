@@ -82,13 +82,23 @@ input:checked + .slider:before {
 .item{
   margin-left: 20%;
   background-color: hotpink;
-  width: 250px;
+  width: 350px;
   padding: 2px;
-  border-radius: 25px;
+  border-radius: 35px;
+  overflow:auto;
 }
 
 .item .right{
-  text-align: right;
+  float: right;
+}
+
+.item .right-swith{
+  float: right;
+  margin-top: 15px;
+}
+
+.item .left{
+  float: left;
 }
 
 @keyframes App-logo-spin {

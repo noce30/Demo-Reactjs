@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
-import icon_female from './icon_female.png';
 import './App.css';
 import PersonalInfoPanel from "./components/PersonalInfoPanel";
-import Toggle from 'react-bootstrap-toggle';
-import Switch from 'react-bootstrap-switch';
+import Gender from'./components/Gender';
 
 class App extends Component {
   constructor() {
@@ -21,17 +18,10 @@ class App extends Component {
   render() {
     return (
       <form>
-        <div className="item">
-          <div className="right">
-            <img src="icon_female.png" alt="male" />
-            <label className="switch">
-              <input type="checkbox" defaultChecked />
-              <span className="slider round"></span>
-            </label>
-            <img src={icon_female} alt="male" />
-          </div>
-
-        </div>
+        <div>
+          <PersonalInfoPanel />
+          <Gender/>>
+        </div>        
       </form>
     )
   }
