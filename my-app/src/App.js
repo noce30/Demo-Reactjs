@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import PersonalInfoPanel from "./components/PersonalInfoPanel";
-import Gender from'./components/Gender';
+import icon_female from './assets/img/icons-demo/icon_female.png';
+import male from './assets/img/icons-demo/icon_male.png';
+import Gender from './components/Gender';
 
 class App extends Component {
   constructor() {
     super();
+    this.state = { checked: true };
+    this.handleGender = this.handleGender.bind(this);
   }
 
-  handleSwitch(elem, state) {
-    console.log('handleSwitch. elem:', elem);
-    console.log('name:', elem.props.name);
-    console.log('new state:', state);
+  handleGender(checked) {
+    this.setState({
+      checked: checked
+    });
   }
 
   render() {
@@ -20,8 +24,12 @@ class App extends Component {
       <form>
         <div>
           <PersonalInfoPanel />
-          <Gender/>>
-        </div>        
+          <img src={this.state.checked ? icon_female : male} />
+          <Gender
+            onGenderChange={this.handleGender}
+            checked={this.state.checked}
+          />
+        </div>
       </form>
     )
   }
