@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const Information = ({ customer }) => {
+const SummaryInformation = ({ customer }) => {
     return (
         <div>
             <h3>{customer.gender == 'male' ? "Mr" : "Mrs"}. {customer.fullName}</h3>
@@ -10,4 +10,4 @@ const Information = ({ customer }) => {
     )
 }
 
-export default Information;
+export default SummaryInformation;
