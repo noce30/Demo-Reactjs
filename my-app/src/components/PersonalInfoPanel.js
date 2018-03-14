@@ -9,7 +9,8 @@ const mockCustomer = {
     age: 32,
     maritalStatus: "Single",
     occupation: "Professional",
-    expectedRetireAge: 60
+    expectedRetireAge: 60,
+    kids: 0
 }
 
 const mapStateToProps = (state) => ({
@@ -24,7 +25,8 @@ class PersonalInfoPanel extends Component {
     render() {
         mockCustomer.maritalStatus = this.props.selectedStatus ? this.props.selectedStatus : mockCustomer.maritalStatus;
         mockCustomer.age = this.props.selectedDob ? new Date().getFullYear() - new Date(this.props.selectedDob).getFullYear() : mockCustomer.age;
-
+        mockCustomer.kids = this.props.selectedNumber ? this.props.selectedNumber : mockCustomer.kids;
+        
         return (
             <div>
                 <SummaryInformation customer={mockCustomer} />

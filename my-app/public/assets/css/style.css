@@ -6,9 +6,9 @@
   list-style: none;
   margin: auto;
   border: dashed 3px blue;
-  border-radius: 50%;
   border-left-color: transparent;
   border-top-color: transparent;
+  border-radius: 50%;
   transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
 }

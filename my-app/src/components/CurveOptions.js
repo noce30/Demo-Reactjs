@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Gender from "./Gender";
 import iconStatus from "../assets/img/icons-demo/icon_status.png";
 import iconDot from "../assets/img/icons-demo/icon_dot.png";
+import iconKid from "../assets/img/icons-demo/icon_kids.png";
 import MaritalStatusContainer from "../containers/MaritalStatusContainer";
 import DateOfBirthContainer from "../containers/DateOfBirthContainer";
+import KidsContainer from "../containers/KidsContainer";
 
 class CurveOptions extends Component {
     constructor() {
@@ -29,7 +31,7 @@ class CurveOptions extends Component {
                     </li>
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
-                    <li><img src={iconStatus} /></li>
+                    <li><KidsContainer/></li>
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
                 </ul>

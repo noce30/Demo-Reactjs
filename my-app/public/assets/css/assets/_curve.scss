@@ -1,7 +1,4 @@
-@mixin on-circle($item-count,
-$circle-size,
-$item-size,
-$is-inner-circle) {
+@mixin on-circle($item-count, $circle-size, $item-size, $is-inner-circle) {
     position: relative;
     width: $circle-size;
     height: $circle-size;
@@ -35,9 +32,11 @@ $is-inner-circle) {
     @include on-circle($item-count: 6, $circle-size: 50em, $item-size: 4em, $is-inner-circle: false);
     margin: auto;
     border: dashed 3px blue;
-    border-radius: 50%;
-    border-left-color: transparent;
-    border-top-color: transparent;
+    border: {
+        left-color: transparent;
+        top-color: transparent;
+        radius: 50%;
+    }
     transform: rotate(-5deg);
     -webkit-transform: rotate(-5deg);
     img {
@@ -55,9 +54,11 @@ $is-inner-circle) {
 .circle-inner {
     @include on-circle($item-count: 6, $circle-size: 41em, $item-size: 2em, $is-inner-circle: true);
     border: solid 3px blue;
-    border-left-color: transparent;
-    border-top-color: transparent;
-    border-radius: 50%;
+    border: {
+        left-color: transparent;
+        top-color: transparent;
+        radius: 50%;
+    }
     width: 48em;
     height: 48em;
     top: 1em;
