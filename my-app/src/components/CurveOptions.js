@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import iconStatus from "../assets/img/icons-demo/icon_status.png";
 import iconDot from "../assets/img/icons-demo/icon_dot.png";
+import MaritalStatusContainer from "../containers/MaritalStatusContainer";
+import DateOfBirthContainer from "../containers/DateOfBirthContainer";
 
 class CurveOptions extends Component {
 
@@ -9,8 +11,8 @@ class CurveOptions extends Component {
             <div>
                 <ul className="circle-container">
                     <li><img src={iconStatus} /></li>
-                    <li><img src={iconStatus} /></li>
-                    <li><img src={iconStatus} /></li>
+                    <li><MaritalStatusContainer /></li>
+                    <li><DateOfBirthContainer /></li>
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
