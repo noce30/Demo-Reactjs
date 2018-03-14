@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import MaritalStatusContainer from "../containers/MaritalStatusContainer";
-import SummaryInformation from "../components/SummaryInfo";
-import DateOfBirthContainer from "../containers/DateOfBirthContainer";
+
+import SummaryInformation from "../components/SummaryInfo"
 import { connect } from "react-redux";
 
 const mockCustomer = {
@@ -25,12 +24,10 @@ class PersonalInfoPanel extends Component {
     render() {
         mockCustomer.maritalStatus = this.props.selectedStatus ? this.props.selectedStatus : mockCustomer.maritalStatus;
         mockCustomer.age = this.props.selectedDob ? new Date().getFullYear() - new Date(this.props.selectedDob).getFullYear() : mockCustomer.age;
-        
+
         return (
             <div>
                 <SummaryInformation customer={mockCustomer} />
-                <MaritalStatusContainer />
-                <DateOfBirthContainer />
             </div>
         );
     }
