@@ -1,22 +1,3 @@
-@import "gender";
-
-.main-bg {
-    background-color: rgba($color: #ffffff, $alpha: 0.9);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-}
-
-.bg-image {
-    background-image: url("../images/bangkok-thailand.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-}
-
 @mixin on-circle($item-count,
 $circle-size,
 $item-size,
@@ -72,7 +53,7 @@ $is-inner-circle) {
 }
 
 .circle-inner {
-    @include on-circle($item-count: 6, $circle-size: 40.5em, $item-size: 2em, $is-inner-circle: true);
+    @include on-circle($item-count: 6, $circle-size: 41em, $item-size: 2em, $is-inner-circle: true);
     border: solid 3px blue;
     border-left-color: transparent;
     border-top-color: transparent;
@@ -102,16 +83,4 @@ $is-inner-circle) {
             left: 25px;
         }
     }
-}
-
-.ml-50 {
-    margin-left: 50px;
-}
-
-.info-position {
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-    width: 300px;
 }
