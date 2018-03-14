@@ -70,7 +70,7 @@ $is-inner-circle) {
 }
 
 .circle-inner {
-    @include on-circle($item-count: 6, $circle-size: 40.5em, $item-size: 2em, $is-inner-circle: true);
+    @include on-circle($item-count: 6, $circle-size: 41em, $item-size: 2em, $is-inner-circle: true);
     border: solid 3px blue;
     border-left-color: transparent;
     border-top-color: transparent;

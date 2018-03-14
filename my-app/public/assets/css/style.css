@@ -78,8 +78,8 @@
 
 .circle-inner {
   position: relative;
-  width: 40.5em;
-  height: 40.5em;
+  width: 41em;
+  height: 41em;
   padding: 0;
   list-style: none;
   border: solid 3px blue;
@@ -107,27 +107,27 @@
 }
 
 .circle-inner > *:nth-of-type(1) {
-  transform: rotate(-20deg) translate(23.82353em);
+  transform: rotate(-20deg) translate(24.11765em);
 }
 
 .circle-inner > *:nth-of-type(2) {
-  transform: rotate(0.83333deg) translate(23.82353em);
+  transform: rotate(0.83333deg) translate(24.11765em);
 }
 
 .circle-inner > *:nth-of-type(3) {
-  transform: rotate(21.66667deg) translate(23.82353em);
+  transform: rotate(21.66667deg) translate(24.11765em);
 }
 
 .circle-inner > *:nth-of-type(4) {
-  transform: rotate(42.5deg) translate(23.82353em);
+  transform: rotate(42.5deg) translate(24.11765em);
 }
 
 .circle-inner > *:nth-of-type(5) {
-  transform: rotate(63.33333deg) translate(23.82353em);
+  transform: rotate(63.33333deg) translate(24.11765em);
 }
 
 .circle-inner > *:nth-of-type(6) {
-  transform: rotate(84.16667deg) translate(23.82353em);
+  transform: rotate(84.16667deg) translate(24.11765em);
 }
 
 .circle-inner img {

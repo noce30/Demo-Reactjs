@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import icon_female from './assets/img/icons-demo/icon_female.png';
 import icon_male from './assets/img/icons-demo/icon_male.png';
 import './App.css';
@@ -9,8 +8,6 @@ import Gender from "./components/Gender";
 
 
 class App extends Component {
-
-
   render() {
     return (
       <div className="bg-image">
@@ -19,8 +16,8 @@ class App extends Component {
             <PersonalInfoPanel />
           </div>
           <CurveOptions />
-          {/* <img src={this.state.checked ? icon_female : icon_male} /> */}
-          {/* <Gender
+          {/* <img src={this.state.checked ? icon_female : icon_male} />
+           <Gender
             onGenderChange={this.handleGender}
             checked={this.state.checked}
           /> */}
