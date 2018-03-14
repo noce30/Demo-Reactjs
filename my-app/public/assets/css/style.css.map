@@ -6,7 +6,8 @@
         "assets/_curve.scss",
         "assets/_gender.scss",
         "assets/_information.scss",
-        "assets/_main.scss"
+        "assets/_main.scss",
+        "assets/_kid.scss"
     ],
     "names": [],
     "file": "style.css"
