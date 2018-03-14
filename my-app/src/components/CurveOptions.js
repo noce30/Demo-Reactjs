@@ -33,7 +33,6 @@ class CurveOptions extends Component {
                     <li><DateOfBirthContainer /></li>
                     <li><img src={iconStatus} /></li>
                     <li><Smoking/></li>
-                    <li><img src={iconStatus} /></li>
                     <li><OccupationContainer /></li>
                 </ul>
                 <ul className="circle-inner" >
