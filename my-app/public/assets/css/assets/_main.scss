@@ -1,0 +1,16 @@
+.main-bg {
+    background-color: rgba($color: #ffffff, $alpha: 0.9);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-image {
+    background-image: url("../images/bangkok-thailand.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
