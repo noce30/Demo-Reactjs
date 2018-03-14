@@ -4,7 +4,11 @@ import {
     SHOW_KID_NUMBER,
     SELECT_KID_NUMBER,
     SHOW_SELECT_MARITAL_OPTIONS,
-    SHOW_SELECT_DATE_PICKER
+    SHOW_SELECT_DATE_PICKER,
+    SHOW_SELECT_MARITAL_OPTIONS,
+    SHOW_SELECT_DATE_PICKER,
+    UPDATE_OCCUPATION_INPUT,
+    SHOW_OCCUPATION_INPUT,
 } from "../constants/actionConstants";
 
 const personalInfo = (state = {}, action) => {
@@ -19,26 +23,37 @@ const personalInfo = (state = {}, action) => {
                 ...state, selectedDob: action.value
             }
         }
+        case UPDATE_OCCUPATION_INPUT: {
+            return {
+                ...state, occupationValue: action.value
+            }
+        }
         case SHOW_SELECT_MARITAL_OPTIONS: {
             return {
-                ...state, isShowSelectMaritalOption: action.isShowed
+                ...state, isShowSelectMaritalOption: state.isShowSelectMaritalOption ? false : action.isShowed
+            }
+        }
+        case SHOW_OCCUPATION_INPUT: {
+            return {
+                ...state, isShowOccupationInput: state.isShowOccupationInput ? false : action.isShowed
             }
         }
         case SHOW_SELECT_DATE_PICKER: {
             return {
-                ...state, isShowSelectDatePicker: action.isShowed
+                ...state, isShowSelectDatePicker: state.isShowSelectDatePicker ? false : action.isShowed
             }
-        } 
+        }
         case SHOW_KID_NUMBER: {
             return {
-                ...state, isShowSelectKidsOption: action.isShowed
+                ...state, isShowSelectKidsOption: state.isShowSelectKidsOption ? false : action.isShowed
             }
         }
         case SELECT_KID_NUMBER: {
             return {
-                ...state, selectedNumber: action.value
+                ...state, selectedNumber: state.isShowSelectKidsOption ? false : action.value
             }
         }
+
         default:
             return state;
     }

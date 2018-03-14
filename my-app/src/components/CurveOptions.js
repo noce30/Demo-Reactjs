@@ -6,6 +6,8 @@ import iconKid from "../assets/img/icons-demo/icon_kids.png";
 import MaritalStatusContainer from "../containers/MaritalStatusContainer";
 import DateOfBirthContainer from "../containers/DateOfBirthContainer";
 import KidsContainer from "../containers/KidsContainer";
+import Smoking from "../components/Smoking"
+import OccupationContainer from "../containers/OccupationContainer";
 
 class CurveOptions extends Component {
     constructor() {
@@ -32,6 +34,9 @@ class CurveOptions extends Component {
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
                     <li><KidsContainer/></li>
+                    <li><Smoking/></li>
+                    <li><OccupationContainer /></li>
+                    <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
                 </ul>
