@@ -6,9 +6,12 @@ import SmokingShow from './SmokingShow';
 class Smoking extends Component {
     constructor() {
         super();
+        this.state = {
+            showFull: false
+        }
         this.clickSmoking = this.clickSmoking.bind(this);
     }
-  
+
     clickSmoking() {
         this.setState({
             showFull: this.state.showFull ? false : true
@@ -22,7 +25,7 @@ class Smoking extends Component {
                     <img src={icon_smoking} alt="male" onClick={this.clickSmoking} />
                 </div>
                 <SmokingShow
-                    showFull={this.state.showFull}                    
+                    showFull={this.state.showFull}
                 />
             </div>
         );

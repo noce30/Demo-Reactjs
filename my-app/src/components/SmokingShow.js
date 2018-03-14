@@ -6,11 +6,24 @@ class SmokingShow extends Component {
 
     }
     render() {
-        return (
-            <div>
-
-            </div>
-        );
+        if (this.props.showFull) {
+            return (
+                <div className="onoffswitch right-swith">
+                    <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" defaultChecked />
+                        <label className="onoffswitch-label" htmlFor="myonoffswitch">
+                        <span className="onoffswitch-inner"></span>
+                        <span className="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div className="left text-title">
+                    smoking
+                </div>
+            );
+        }
     }
 }
 

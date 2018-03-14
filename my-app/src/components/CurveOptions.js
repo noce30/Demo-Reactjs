@@ -4,6 +4,7 @@ import iconStatus from "../assets/img/icons-demo/icon_status.png";
 import iconDot from "../assets/img/icons-demo/icon_dot.png";
 import MaritalStatusContainer from "../containers/MaritalStatusContainer";
 import DateOfBirthContainer from "../containers/DateOfBirthContainer";
+import Smoking from "../components/Smoking"
 
 class CurveOptions extends Component {
     constructor() {
@@ -30,7 +31,7 @@ class CurveOptions extends Component {
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
                     <li><img src={iconStatus} /></li>
-                    <li><img src={iconStatus} /></li>
+                    <li><Smoking/></li>
                     <li><img src={iconStatus} /></li>
                 </ul>
                 <ul className="circle-inner" >
