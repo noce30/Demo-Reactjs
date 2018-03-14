@@ -69,7 +69,6 @@ export default {
     selectMaritalStatusOptions,
     showSelectOption,
     showSelectDatePicker,
-    selectDateOfBirth,
     selectKidsNumber,
     showSelectKidNumber,
     showOccupationInput,

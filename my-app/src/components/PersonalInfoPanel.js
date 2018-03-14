@@ -26,7 +26,7 @@ class PersonalInfoPanel extends Component {
         mockCustomer.maritalStatus = this.props.selectedStatus ? this.props.selectedStatus : mockCustomer.maritalStatus;
         mockCustomer.age = this.props.selectedDob ? new Date().getFullYear() - new Date(this.props.selectedDob).getFullYear() : mockCustomer.age;
         mockCustomer.kids = this.props.selectedNumber ? this.props.selectedNumber : mockCustomer.kids;
-        mockCustomer.occupation = props.occupationValue === undefined ? mockCustomer.occupation : props.occupationValue;
+        mockCustomer.occupation = this.props.occupationValue === undefined ? mockCustomer.occupation : this.props.occupationValue;
         return (
             <div>
                 <SummaryInformation customer={mockCustomer} />

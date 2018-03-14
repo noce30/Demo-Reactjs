@@ -5,8 +5,6 @@ import {
     SELECT_KID_NUMBER,
     SHOW_SELECT_MARITAL_OPTIONS,
     SHOW_SELECT_DATE_PICKER,
-    SHOW_SELECT_MARITAL_OPTIONS,
-    SHOW_SELECT_DATE_PICKER,
     UPDATE_OCCUPATION_INPUT,
     SHOW_OCCUPATION_INPUT,
 } from "../constants/actionConstants";
@@ -50,7 +48,7 @@ const personalInfo = (state = {}, action) => {
         }
         case SELECT_KID_NUMBER: {
             return {
-                ...state, selectedNumber: state.isShowSelectKidsOption ? false : action.value
+                ...state, selectedNumber: action.value
             }
         }
 
