@@ -1,33 +1,46 @@
 import {
-    SELECT_MARITAL_STATUS, 
-    SELECT_DATE_PICKER, 
-    SHOW_SELECT_MARITAL_OPTIONS, 
-    SHOW_SELECT_DATE_PICKER }from "../constants/actionConstants"; 
+    SELECT_MARITAL_STATUS,
+    SELECT_DATE_PICKER,
+    SHOW_SELECT_MARITAL_OPTIONS,
+    SHOW_SELECT_DATE_PICKER,
+    UPDATE_OCCUPATION_INPUT,
+    SHOW_OCCUPATION_INPUT,
+} from "../constants/actionConstants";
 
-const personalInfo = (state =  {}, action) =>  {
+const personalInfo = (state = {}, action) => {
     switch (action.type) {
         case SELECT_MARITAL_STATUS: {
             return {
-                ...state, selectedStatus:action.value
+                ...state, selectedStatus: action.value
             }
         }
         case SELECT_DATE_PICKER: {
             return {
-                ...state, selectedDob:action.value
+                ...state, selectedDob: action.value
+            }
+        }
+        case UPDATE_OCCUPATION_INPUT: {
+            return {
+                ...state, occupationValue: action.value
             }
         }
         case SHOW_SELECT_MARITAL_OPTIONS: {
             return {
-                ...state, isShowSelectMaritalOption:action.isShowed
+                ...state, isShowSelectMaritalOption: state.isShowSelectMaritalOption ? false : action.isShowed
+            }
+        }
+        case SHOW_OCCUPATION_INPUT: {
+            return {
+                ...state, isShowOccupationInput: state.isShowOccupationInput ? false : action.isShowed
             }
         }
         case SHOW_SELECT_DATE_PICKER: {
             return {
-                ...state, isShowSelectDatePicker:action.isShowed
+                ...state, isShowSelectDatePicker: state.isShowSelectDatePicker ? false : action.isShowed
             }
         }
         default:
-            return state; 
+            return state;
     }
 }
 
