@@ -22,19 +22,13 @@ class CurveOptions extends Component {
         return (
             <div>
                 <ul className="circle-container">
-<<<<<<< HEAD
                     <li><Gender
                         onGenderChange={this.handleGender}
                         checked={this.state.checked}
                     />
                     </li>
-                    <li><img src={iconStatus} /></li>
-                    <li><img src={iconStatus} /></li>
-=======
-                    <li><img src={iconStatus} /></li>
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
->>>>>>> fix-cannot-click-icon
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
