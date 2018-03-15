@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class SmokingShow extends Component {
-    constructor(props) {
-        super(props);
-
-    }
     render() {
-        if (this.props.showFull) {
+        if (this.props.showSmoking) {
             return (
                 <div className="onoffswitch right-swith">
                     <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox" id="myonoffswitch" defaultChecked />
@@ -27,4 +24,9 @@ class SmokingShow extends Component {
     }
 }
 
-export default SmokingShow;
+const mapStateToProps = (state) => ({
+    showSmoking: state.personalInfo.showSmoking
+})
+
+
+export default connect(mapStateToProps)(SmokingShow);

@@ -1,28 +1,17 @@
 import React, { Component } from 'react';
 import GenderShow from './GenderShow';
 import icon_select_gender from '../assets/img/icons-demo/icon_select_gender.png';
+import { connect } from 'react-redux';
+import {CLICK_GENDER_ICON} from '../constants/actionConstants';
 
 class Gender extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { showFull: false };
-        this.ClickGender = this.ClickGender.bind(this);
-    }
-
-    ClickGender() {
-        this.setState({
-            showFull: this.state.showFull ? false : true
-        });
-    }
-
     render() {
         return (
-            <div className="item" style={this.state.showFull ? { backgroundColor: "hotpink" } : null}>
+            <div className="item" style={this.props.showFull ? { backgroundColor: "hotpink" } : null}>
                 <div className="left">
-                    <img src={icon_select_gender} alt="male" onClick={this.ClickGender} />
+                    <img src={icon_select_gender} alt="male" onClick={e => this.props.dispatch({ type: CLICK_GENDER_ICON, value: !this.props.showFull })} />
                 </div>
                 <GenderShow
-                    showFull={this.state.showFull}
                     onGenderChange={this.props.onGenderChange}
                     checked={this.props.checked}
                 />
@@ -30,5 +19,11 @@ class Gender extends Component {
         );
     }
 }
+ const mapStateToProps = (state) => ({
+    showFull: state.personalInfo.showFull
+})
 
-export default Gender;
+
+
+
+export default connect(mapStateToProps)(Gender);

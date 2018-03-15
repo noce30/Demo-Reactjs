@@ -7,6 +7,9 @@ import {
     SHOW_SELECT_DATE_PICKER,
     UPDATE_OCCUPATION_INPUT,
     SHOW_OCCUPATION_INPUT,
+    CLICK_GENDER_ICON,
+    SELECT_GENDER,
+    CLICK_SMOKING_ICON
 } from "../constants/actionConstants";
 
 const personalInfo = (state = {}, action) => {
@@ -49,6 +52,24 @@ const personalInfo = (state = {}, action) => {
         case SELECT_KID_NUMBER: {
             return {
                 ...state, selectedNumber: action.value
+            }
+        }
+
+        case CLICK_GENDER_ICON: {
+            return {
+                ...state, showFull: action.value
+            }
+        }
+
+        case SELECT_GENDER: {
+            return {
+                ...state, isMale: action.value
+            }
+        }
+
+        case CLICK_SMOKING_ICON:{
+            return{
+                ...state, showSmoking: action.value
             }
         }
 
