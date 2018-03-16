@@ -2,23 +2,13 @@ import React, { Component } from 'react';
 import GenderShow from './GenderShow';
 import icon_select_gender from '../assets/img/icons-demo/icon_select_gender.png';
 import { Transition } from 'react-transition-group';
+import { connect } from 'react-redux';
+import { CLICK_GENDER_ICON } from '../constants/actionConstants';
 
 class Gender extends Component {
-
-    constructor(props) {
-        super(props)
-        this.state = { showFull: false };
-        this.ClickGender = this.ClickGender.bind(this);
-    }
-
-    ClickGender() {
-
-        this.setState(({ showFull }) => ({
-            showFull: !showFull
-        }))
-    }
-
+   
     render() {
+
         const duration = 300;
 
         const defaultStyle = {
@@ -35,27 +25,29 @@ class Gender extends Component {
 
         return (
             <div>
-                <img src={icon_select_gender} alt="male" onClick={this.ClickGender} />
+                <img src={icon_select_gender} alt="male" onClick={e => this.props.dispatch({ type: CLICK_GENDER_ICON, value: !this.props.showFull })} />
                 <span className="field-info">Gender</span>
-                <Transition in={this.state.showFull} timeout={300}>
+                <Transition in={this.props.showFull} timeout={300}>
                     {state => (
                         <div
                             style={{
                                 ...defaultStyle,
                                 ...transitionStyles[state]
                             }}>
-                            <div className="item left" style={this.state.showFull ? { backgroundColor: "hotpink" } : null}>
+                            <div className="item" style={this.props.showFull ? { backgroundColor: "hotpink" } : null}>
                                 <GenderShow
-                                    showFull={this.state.showFull}
                                     onGenderChange={this.props.onGenderChange}
                                     checked={this.props.checked} />
                             </div>
                         </div>
                     )}
                 </Transition>
-            </div>
+            </div >
         );
     }
 }
+const mapStateToProps = (state) => ({
+    showFull: state.personalInfo.showFull
+})
 
-export default Gender;
+export default connect(mapStateToProps)(Gender);

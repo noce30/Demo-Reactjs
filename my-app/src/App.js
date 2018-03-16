@@ -16,11 +16,6 @@ class App extends Component {
             <PersonalInfoPanel />
           </div>
           <CurveOptions />
-          {/* <img src={this.state.checked ? icon_female : icon_male} />
-           <Gender
-            onGenderChange={this.handleGender}
-            checked={this.state.checked}
-          /> */}
         </div>
       </div>
     );
