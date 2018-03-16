@@ -49,11 +49,17 @@ input:checked+.slider {
 input:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
 }
+#container {   
+    width: 350px;   
+    border-radius: 35px;
+    overflow: hidden;
+}
 
 .item {   
     width: 350px;    
     border-radius: 35px;
     overflow: hidden;
+    height: 70px;
    
     .right,
     .right-swith {
@@ -67,11 +73,13 @@ input:focus+.slider {
         float: left;
     }
     .text-title {
-        margin-left: 15px;
+        margin-left: 80px;
+        width: 200px;
         margin-top: 25px;
         color: #29317B;
         font-weight: bold;
         text-transform: uppercase;
+        position: fixed;
     }  
 }
 
@@ -82,4 +90,8 @@ input:focus+.slider {
 
 .mr-10{
     margin-right: 10px;
+}
+
+.toogle-height{
+    height: 70px;
 }

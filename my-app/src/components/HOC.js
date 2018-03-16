@@ -11,18 +11,15 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
         super();
         this.state = {
             show: false,
-            width: 300
+            width: 350
         }
     }
 
     clickIcon() {
-        this.setState(({ show, width }) => ({
+        this.setState(({ show }) => ({
             show: !show,
-            width: show ? 300 : 0
-
+            width: !show ? 350 : 0
         }))
-        console.log(this.state.show, this.state.width);
-
     }
 
     render() {
@@ -30,13 +27,13 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
         const duration = 300;
 
         const defaultStyle = {
-            transition: `opacity ${duration}ms ease-in-out`,
+            transition: `width ${2}s`,
             opacity: 0,
-            top: 0,
+            top: 0,       
+            width: this.state.width,
             position: 'absolute',
-            zIndex: -20,
-            width: this.state.width
-
+            zIndex: -10,
+            backgroundColor: this.state.show ? "hotpink" : null
         }
 
         const transitionStyles = {
@@ -45,32 +42,27 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
         };
 
         return (
-            <div className="item">
+            <div>
                 <div className="left">
                     <img src={link} alt="male" onClick={() => this.clickIcon()} />
                 </div>
-                <div>
-                    <Transition in={this.state.show} timeout={duration}>
-                        {state => (
-                            <div
-                                style={{
-                                    ...defaultStyle,
-                                    ...transitionStyles[state]
-                                }}>
-                                <div className="item toogle-height" style={this.state.show ? { backgroundColor: "hotpink", width: 350 } : null}>
-                                    <ComposedComponent />
-                                </div>
-                            </div>
-                        )}
-                    </Transition>
-
-                    {
-                        !this.state.show &&
+                <Transition in={this.state.show} timeout={4}>
+                    {state => (
+                        <div className="item"
+                            style={{
+                                ...defaultStyle,
+                                ...transitionStyles[state]
+                            }}>
+                            <ComposedComponent />
+                        </div>
+                    )}
+                </Transition>
+                {
+                    (!this.state.show &&
                         <div className="left text-title">
                             {name}
-                        </div>
-                    }
-                </div>
+                        </div>)
+                }
             </div>
         );
     }
