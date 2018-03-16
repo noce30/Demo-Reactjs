@@ -50,12 +50,11 @@ input:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
 }
 
-.item {
-    margin-left: 20%;
-    width: 350px;
-    padding: 2px;
+.item {   
+    width: 350px;    
     border-radius: 35px;
     overflow: auto;
+   
     .right,
     .right-swith {
         float: right;
@@ -72,5 +71,10 @@ input:focus+.slider {
         color: #29317B;
         font-weight: bold;
         text-transform: uppercase;
+    }
+
+    .img-gender-container{
+        position: relative;
+        z-index: 20;
     }
 }

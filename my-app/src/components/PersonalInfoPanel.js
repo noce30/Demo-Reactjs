@@ -32,7 +32,7 @@ class PersonalInfoPanel extends Component {
         return (
             <div>
                 <SummaryInformation customer={mockCustomer} />
-                <img src={this.props.isMale?iconFemale:iconMale} />
+                <img src={this.props.isMale ? iconFemale : iconMale} />
             </div>
         );
     }
