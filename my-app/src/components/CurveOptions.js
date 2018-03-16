@@ -8,6 +8,7 @@ import DateOfBirthContainer from "../containers/DateOfBirthContainer";
 import KidsContainer from "../containers/KidsContainer";
 import Smoking from "../components/Smoking"
 import OccupationContainer from "../containers/OccupationContainer";
+import SmokingShow from "../components/SmokingShow"
 
 class CurveOptions extends Component {
     constructor() {
@@ -33,10 +34,10 @@ class CurveOptions extends Component {
                     </li>
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
-                    <li><KidsContainer/></li>
-                    <li><Smoking/></li>
+                    <li><KidsContainer /></li>
+                    <li><SmokingShow /></li>
                     <li><OccupationContainer /></li>
-                    <li><img src={iconStatus} /></li>
+                    <li></li>
                     <li><img src={iconStatus} /></li>
                     <li><img src={iconStatus} /></li>
                 </ul>
