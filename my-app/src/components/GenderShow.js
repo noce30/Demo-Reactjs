@@ -17,7 +17,7 @@ class GenderShow extends Component {
 
                     <div className="right-swith">
                         <label className="switch">
-                            <input type="checkbox" defaultChecked onChange={e => this.props.dispatch({ type: SELECT_GENDER, value: e.target.checked })} />
+                            <input type="checkbox" checked = {this.props.isMale} onChange={e => this.props.dispatch({ type: SELECT_GENDER, value: e.target.checked })} />
                             <span className="slider round"></span>
                         </label>
                     </div>
@@ -40,7 +40,8 @@ class GenderShow extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    showFull: state.personalInfo.showFull
+    showFull: state.gender.showFull,
+    isMale: state.gender.isMale
 })
 
 

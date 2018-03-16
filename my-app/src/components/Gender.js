@@ -47,8 +47,8 @@ class Gender extends Component {
         );
     }
 }
-const mapStateToProps = (state) => ({
-    showFull: state.personalInfo.showFull
+ const mapStateToProps = (state) => ({
+    showFull: state.gender.showFull
 })
 
 export default connect(mapStateToProps)(Gender);

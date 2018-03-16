@@ -18,7 +18,7 @@ class Smoking extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    showSmoking: state.personalInfo.showSmoking
+    showSmoking: state.smoking.showSmoking
 })
 
 
