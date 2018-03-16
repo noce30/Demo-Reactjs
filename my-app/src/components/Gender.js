@@ -20,7 +20,7 @@ class Gender extends Component {
     }
 }
  const mapStateToProps = (state) => ({
-    showFull: state.personalInfo.showFull
+    showFull: state.gender.showFull
 })
 
 

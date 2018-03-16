@@ -16,7 +16,8 @@ const mockCustomer = {
 }
 
 const mapStateToProps = (state) => ({
-    ...state.personalInfo
+    ...state.personalInfo,
+    isMale: state.gender.isMale
 })
 
 class PersonalInfoPanel extends Component {
