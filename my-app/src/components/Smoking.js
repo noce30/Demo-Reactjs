@@ -5,7 +5,7 @@ import SmokingShow from './SmokingShow';
 import { CLICK_SMOKING_ICON } from '../constants/actionConstants'
 import { Transition } from 'react-transition-group';
 
-class Smoking extends Component {
+class Smoking1 extends Component {
     render() {
         const duration = 300;
 
@@ -49,4 +49,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps)(Smoking);
+export default connect(mapStateToProps)(Smoking1);

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import {SELECT_GENDER} from '../constants/actionConstants';
 import icon_select_gender from "../assets/img/icons-demo/icon_select_gender.png";
 
-class GenderShow extends Component {
+class GenderShow1 extends Component {
     render() {
         return (
 
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps)(GenderShow);
+export default connect(mapStateToProps)(GenderShow1);

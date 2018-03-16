@@ -5,7 +5,7 @@ import { Transition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { CLICK_GENDER_ICON } from '../constants/actionConstants';
 
-class Gender extends Component {
+class Gender1 extends Component {
    
     render() {
 
@@ -51,4 +51,4 @@ class Gender extends Component {
     showFull: state.gender.showFull
 })
 
-export default connect(mapStateToProps)(Gender);
+export default connect(mapStateToProps)(Gender1);
