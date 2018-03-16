@@ -14,24 +14,11 @@ import icon_male from '../assets/img/icons-demo/icon_male.png';
 import {SELECT_GENDER} from '../constants/actionConstants';
 
 class CurveOptions extends Component {
-    constructor() {
-        super();
-        this.state = { checked: true };
-        this.handleGender = this.handleGender.bind(this);
-    }
-
-    handleGender(checked) {
-        this.setState({
-            checked: checked
-        });
-    }
-
     render() {
         return (
             <div>
                 <ul className="circle-container">
-                    <li><Gender/>
-                    </li>
+                    <li><Gender/></li>
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
                     <li><KidsContainer /></li>
