@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { SLECT_SMOKING } from '../constants/actionConstants';
-import icon_smoking from '../assets/img/icons-demo/icon_smoking.png';
-import HOC from "../components/HOC"
 
-class SmokingShow1 extends Component {
+class SmokingShow extends Component {
     render() {
         return (
             <div className="onoffswitch right-swith">
@@ -23,4 +21,4 @@ const mapStateToProps = (state) => ({
     isSmoking: state.smoking.isSmoking
 })
 
-export default HOC(SmokingShow1, icon_smoking, "smoking");
+export default connect(mapStateToProps)(SmokingShow);

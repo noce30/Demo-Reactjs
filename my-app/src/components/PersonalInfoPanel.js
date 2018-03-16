@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import SummaryInformation from "../components/SummaryInfo"
-import iconMale from "../assets/img/icons-demo/icon_male.png";
-import iconFemale from "../assets/img/icons-demo/icon_female.png";
+import iconMale from "../assets/img/icons-demo/icon_man.png";
+import iconFemale from "../assets/img/icons-demo/icon_women.png";
 import { connect } from "react-redux";
 
 const mockCustomer = {
@@ -34,7 +34,7 @@ class PersonalInfoPanel extends Component {
         return (
             <div>
                 <SummaryInformation customer={mockCustomer} isMale={this.props.isMale} isSmoking={this.props.isSmoking} />
-                <img src={this.props.isMale ? iconFemale : iconMale} />
+                <img src={this.props.isMale ? iconMale : iconFemale} />
             </div>
         );
     }
