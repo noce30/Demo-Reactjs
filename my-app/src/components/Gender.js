@@ -22,6 +22,7 @@ class Gender1 extends Component {
         const transitionStyles = {
             entering: { opacity: 0 },
             entered: { opacity: 1 },
+            
         };
 
         return (

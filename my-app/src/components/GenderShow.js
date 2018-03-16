@@ -12,7 +12,7 @@ class GenderShow extends Component {
                 <div className="right">
                     <img src={icon_female} alt="male" onClick={e => this.props.dispatch({ type: SELECT_GENDER, value: true })} />
                 </div>
-                <div className="right">
+                <div className="right mr-10">
                     <img src={icon_male} alt="male" onClick={e => this.props.dispatch({ type: SELECT_GENDER, value: false })} />
                 </div>
             </div>

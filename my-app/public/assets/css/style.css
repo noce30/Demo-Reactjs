@@ -189,7 +189,7 @@ input:focus + .slider {
 .item {
   width: 350px;
   border-radius: 35px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .item .right,
@@ -207,8 +207,8 @@ input:focus + .slider {
 }
 
 .item .text-title {
-  margin-left: 25px;
-  margin-top: 15px;
+  margin-left: 15px;
+  margin-top: 25px;
   color: #29317B;
   font-weight: bold;
   text-transform: uppercase;
@@ -217,6 +217,10 @@ input:focus + .slider {
 .img-gender-container {
   position: relative;
   z-index: 20;
+}
+
+.mr-10 {
+  margin-right: 10px;
 }
 
 .info-position {
@@ -242,6 +246,10 @@ input:focus + .slider {
   position: fixed;
   height: 100%;
   width: 100%;
+}
+
+.toogle-height {
+  height: 70px;
 }
 
 .kid-container {
@@ -326,9 +334,5 @@ input:focus + .slider {
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
-}
-
-.smoking-height {
-  height: 70px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,7 @@ import SmokingShow from './SmokingShow';
 import GenderShow from "./GenderShow";
 import icon_smoking from '../assets/img/icons-demo/icon_smoking.png';
 import icon_select_gender from '../assets/img/icons-demo/icon_select_gender.png';
+import { Transition } from 'react-transition-group';
 
 const HOC = (ComposedComponent, link, name) => class extends Component {
     constructor() {
@@ -12,20 +13,46 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
     }
 
     clickIcon() {
-        this.setState({ show: !this.state.show });
+        this.setState(({ show }) => ({
+            show: !show
+        }))
     }
 
     render() {
+
+        const duration = 300;
+
+        const defaultStyle = {
+            transition: `opacity ${duration}ms ease-in-out`,
+            opacity: 0,
+            top: 0,
+            position: 'absolute',
+            zIndex: -20
+        }
+
+        const transitionStyles = {
+            entering: { opacity: 0 },
+            entered: { opacity: 1 },
+        };
+
         return (
-            <div className="item" style={this.state.show ? { backgroundColor: "hotpink" } : null}>
+            <div className="item">
                 <div className="left">
-                    <img src={link} alt="male" onClick={this.clickIcon.bind(this)} />
+                    <img src={link} alt="male" onClick={() => this.clickIcon()} />
                 </div>
-                {this.state.show &&
-                    <div>
-                        <ComposedComponent />
-                    </div>
-                }
+                <Transition in={this.state.show} timeout={duration}>
+                    {state => (
+                        <div
+                            style={{
+                                ...defaultStyle,
+                                ...transitionStyles[state]
+                            }}>
+                            <div className="item toogle-height" style={this.state.show ? { backgroundColor: "hotpink" } : null}>
+                                <ComposedComponent />
+                            </div>
+                        </div>
+                    )}
+                </Transition>
                 {
                     !this.state.show &&
                     <div className="left text-title">
