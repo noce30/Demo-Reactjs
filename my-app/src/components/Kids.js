@@ -3,25 +3,16 @@ import iconKid from "../assets/img/icons-demo/icon_kids.png";
 
 const Kids = (props) => {
     const selectedNumber = props.selectedNumber;
-
     return (
-        <div>
-            <div >
-                <img src={iconKid} onClick={e => props.onClickToShowSelectNumber(true)} />
-                <span className="field-info">Kids</span>
-            </div>
-            {props.isShowSelectKidsOption &&
-                <div >
-                    <select name="kids" value={selectedNumber} onChange={e => {
-                        props.onSelectKidsNumber(e.target.value)
-                        props.onClickToShowSelectNumber(false)
-                    }}>
-                        {props.numberOfKidsOptions.items.map((opt, i) => {
-                            return <option key={i} value={opt}>{opt}</option>
-                        })}
-                    </select>
-                </div>
-            }
+        <div className="col-md-4" style={{marginTop:'15px'}}>
+            <select className="form-control" name="kids" value={selectedNumber} onChange={e => {
+                props.onSelectKidsNumber(e.target.value)
+                props.onClickToShowSelectNumber(false)
+            }}>
+                {props.numberOfKidsOptions.items.map((opt, i) => {
+                    return <option key={i} value={opt}>{opt}</option>
+                })}
+            </select>
         </div>
     )
 }

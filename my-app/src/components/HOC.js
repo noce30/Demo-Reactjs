@@ -67,3 +67,5 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
 export const Smoking = HOC(connect()(SmokingShow), icon_smoking, "smoking");
 
 export const Gender = HOC(connect()(GenderShow), icon_select_gender, "gender");
+
+export default HOC;

@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import Kids from "../components/Kids";
 import actions from "../actions/index";
+import HOC from "../components/HOC";
+import icon_kids from '../assets/img/icons-demo/icon_kids.png';
 
 const numberOfKidsOptions = {
     items: ['1', '2', '3', '4', '5', '6', 'more'],
@@ -17,4 +19,5 @@ const mapDispatchToProps = dispatch => ({
     onClickToShowSelectNumber: (isShowed) => dispatch(actions.showSelectKidNumber(isShowed))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Kids);;
+
+export default HOC(connect(mapStateToProps, mapDispatchToProps)(Kids), icon_kids, 'kids');
