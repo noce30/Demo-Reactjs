@@ -13,9 +13,10 @@ class Gender extends Component {
 
         const defaultStyle = {
             transition: `opacity ${duration}ms ease-in-out`,
-            opacity: 0,
-            padding: 20,
-            display: 'inline-block'
+            opacity: 0,        
+            top: 0,  
+            display: 'inline-block',
+            position: 'absolute'          
         }
 
         const transitionStyles = {
@@ -25,7 +26,7 @@ class Gender extends Component {
 
         return (
             <div>
-                <img src={icon_select_gender} alt="male" onClick={e => this.props.dispatch({ type: CLICK_GENDER_ICON, value: !this.props.showFull })} />
+                <img className="img-gender-container" src={icon_select_gender} alt="male" onClick={e => this.props.dispatch({ type: CLICK_GENDER_ICON, value: !this.props.showFull })} />              
                 <span className="field-info">Gender</span>
                 <Transition in={this.props.showFull} timeout={300}>
                     {state => (

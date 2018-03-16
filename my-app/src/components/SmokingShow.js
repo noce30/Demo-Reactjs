@@ -7,6 +7,7 @@ import HOC from "../components/HOC"
 class SmokingShow extends Component {
     render() {
         return (
+<<<<<<< HEAD
             <div className="onoffswitch right-swith">
                 <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox"
                     id="myonoffswitch" checked={this.props.isSmoking} onChange={e => this.props.dispatch({ type: SLECT_SMOKING, value: e.target.checked })} />
@@ -16,6 +17,18 @@ class SmokingShow extends Component {
                 </label>
             </div>
         );
+=======
+            (this.props.showSmoking &&
+                <div className="onoffswitch right-swith" >
+                    <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox"
+                        id="myonoffswitch" checked={this.props.isSmoking} onChange={e => this.props.dispatch({ type: SLECT_SMOKING, value: e.target.checked })} />
+                    <label className="onoffswitch-label" htmlFor="myonoffswitch">
+                        <span className="onoffswitch-inner"></span>
+                        <span className="onoffswitch-switch"></span>
+                    </label>
+                </div >
+            ));
+>>>>>>> af14800e2a0dbfc6d5d29e8ace031d1a0a9fdd87
     }
 }
 
