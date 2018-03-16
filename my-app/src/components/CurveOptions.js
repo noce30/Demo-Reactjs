@@ -37,9 +37,6 @@ class CurveOptions extends Component {
                     <li><KidsContainer /></li>
                     <li><SmokingShow /></li>
                     <li><OccupationContainer /></li>
-                    <li></li>
-                    <li><img src={iconStatus} /></li>
-                    <li><img src={iconStatus} /></li>
                 </ul>
                 <ul className="circle-inner" >
                     <li><img src={iconDot} /></li>
