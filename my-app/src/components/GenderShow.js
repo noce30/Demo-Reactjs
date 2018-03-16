@@ -7,7 +7,6 @@ import { SELECT_GENDER } from '../constants/actionConstants';
 class GenderShow extends Component {
     render() {
         return (
-
             <div>
                 <div className="right">
                     <img src={icon_female} alt="male" onClick={e => this.props.dispatch({ type: SELECT_GENDER, value: true })} />

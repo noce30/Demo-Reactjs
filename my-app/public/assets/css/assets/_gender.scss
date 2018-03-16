@@ -56,15 +56,20 @@ input:focus+.slider {
 }
 
 .item {   
-    width: 350px;    
+    width: 69px;    
     border-radius: 35px;
     overflow: hidden;
     height: 70px;
+    transition-timing-function: ease-in-out;
+    transition: width 2s;
+    background-color: palevioletred;
    
     .right,
     .right-swith {
         float: right;
+        visibility: hidden;
     }
+    
     .right-swith {
         margin-top: 15px;
         margin-right: 16px;
@@ -80,7 +85,20 @@ input:focus+.slider {
         font-weight: bold;
         text-transform: uppercase;
         position: fixed;
-    }  
+    }
+
+    &:hover{
+        width: 350px;
+    }
+    &:hover .right,
+    .right-swith 
+    {
+        visibility: visible;
+    }
+
+    &:hover .text-title{
+        visibility: hidden;
+    }
 }
 
 .img-gender-container{

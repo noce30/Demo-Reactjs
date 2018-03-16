@@ -1,52 +1,24 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import icon_smoking from '../assets/img/icons-demo/icon_smoking.png';
-import SmokingShow from './SmokingShow';
-import { CLICK_SMOKING_ICON } from '../constants/actionConstants'
-import { Transition } from 'react-transition-group';
+import { connect } from 'react-redux';
+import { SLECT_SMOKING } from '../constants/actionConstants';
 
-class Smoking1 extends Component {
+class SmokingShow extends Component {
     render() {
-        const duration = 300;
-
-        const defaultStyle = {
-            transition: `opacity ${duration}ms ease-in-out`,
-            opacity: 0,
-            top: 0,           
-            display: 'inline-block',
-            position: 'absolute',
-            zIndex: -20
-        }
-
-        const transitionStyles = {
-            entering: { opacity: 0 },
-            entered: { opacity: 1 },
-        };
         return (
-            <div>
-                <img src={icon_smoking} alt="male" onClick={e => this.props.dispatch({ type: CLICK_SMOKING_ICON, value: !this.props.showSmoking })} />
-                <span className="field-info">Smoking</span>
-                <Transition in={this.props.showSmoking} timeout={300}>
-                    {state => (
-                        <div
-                            style={{
-                                ...defaultStyle,
-                                ...transitionStyles[state]
-                            }}>
-                            <div className="item smoking-height" style={this.props.showSmoking ? { backgroundColor: "hotpink" } : null}>
-                                <SmokingShow />
-                            </div>
-                        </div>
-                    )}
-                </Transition>
+            <div className="onoffswitch right-swith">
+                <input type="checkbox" name="onoffswitch" className="onoffswitch-checkbox"
+                    id="myonoffswitch" checked={this.props.isSmoking} onChange={e => this.props.dispatch({ type: SLECT_SMOKING, value: e.target.checked })} />
+                <label className="onoffswitch-label" htmlFor="myonoffswitch">
+                    <span className="onoffswitch-inner"></span>
+                    <span className="onoffswitch-switch"></span>
+                </label>
             </div>
         );
     }
 }
 
 const mapStateToProps = (state) => ({
-    showSmoking: state.smoking.showSmoking
+    isSmoking: state.smoking.isSmoking
 })
 
-
-export default connect(mapStateToProps)(Smoking1);
+export default connect(mapStateToProps)(SmokingShow);

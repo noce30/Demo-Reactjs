@@ -193,15 +193,19 @@ input:focus + .slider {
 }
 
 .item {
-  width: 350px;
+  width: 69px;
   border-radius: 35px;
   overflow: hidden;
   height: 70px;
+  transition-timing-function: ease-in-out;
+  transition: width 2s;
+  background-color: palevioletred;
 }
 
 .item .right,
 .item .right-swith {
   float: right;
+  visibility: hidden;
 }
 
 .item .right-swith {
@@ -221,6 +225,19 @@ input:focus + .slider {
   font-weight: bold;
   text-transform: uppercase;
   position: fixed;
+}
+
+.item:hover {
+  width: 350px;
+}
+
+.item:hover .right,
+.item .right-swith {
+  visibility: visible;
+}
+
+.item:hover .text-title {
+  visibility: hidden;
 }
 
 .img-gender-container {
