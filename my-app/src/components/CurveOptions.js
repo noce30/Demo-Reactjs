@@ -11,8 +11,7 @@ import icon_female from '../assets/img/icons-demo/icon_female.png';
 import icon_male from '../assets/img/icons-demo/icon_male.png';
 import icon_dob from '../assets/img/icons-demo/icon_male.png';
 import { SELECT_GENDER } from '../constants/actionConstants';
-import Gender from "../components/Gender";
-import Smoking from "../components/Smoking";
+import { Gender, Smoking } from "../components/HOC";
 
 class CurveOptions extends Component {
     render() {

@@ -4,7 +4,7 @@ import iconKid from "../assets/img/icons-demo/icon_kids.png";
 const Kids = (props) => {
     const selectedNumber = props.selectedNumber;
     return (
-        <div className="col-md-4">
+        <div className="col-md-4" style={{marginTop:'15px'}}>
             <select className="form-control" name="kids" value={selectedNumber} onChange={e => {
                 props.onSelectKidsNumber(e.target.value)
                 props.onClickToShowSelectNumber(false)

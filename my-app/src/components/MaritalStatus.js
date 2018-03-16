@@ -5,7 +5,7 @@ import iconStatus from "../assets/img/icons-demo/icon_status.png";
 const MaritalStatus = (props) => {
     const selectedStatus = props.selectedStatus;
     return (
-        <div className="col-md-8">
+        <div className="col-md-8" style={{marginTop:"15px"}}>
             <select className="form-control" name="maritalStatus" value={selectedStatus} onChange={e => {
                 props.onSelectMaritalStatus(e.target.value)
             }}>
