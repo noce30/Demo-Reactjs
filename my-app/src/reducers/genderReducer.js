@@ -3,7 +3,7 @@ import {
     SELECT_GENDER
 } from '../constants/actionConstants';
 
-const defaultState = { showFull: false, isMale: false, showSmoking: false };
+const defaultState = { showFull: false, isMale: false};
 
 const genderReducer = (state = defaultState, action) => {
     switch (action.type) {

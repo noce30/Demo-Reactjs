@@ -17,7 +17,8 @@ const mockCustomer = {
 
 const mapStateToProps = (state) => ({
     ...state.personalInfo,
-    isMale: state.gender.isMale
+    isMale: state.gender.isMale,
+    isSmoking: state.smoking.isSmoking
 })
 
 class PersonalInfoPanel extends Component {
@@ -32,8 +33,8 @@ class PersonalInfoPanel extends Component {
         mockCustomer.occupation = this.props.occupationValue === undefined ? mockCustomer.occupation : this.props.occupationValue;
         return (
             <div>
-                <SummaryInformation customer={mockCustomer} />
-                <img src={this.props.isMale?iconFemale:iconMale} />
+                <SummaryInformation customer={mockCustomer} isMale={this.props.isMale} isSmoking={this.props.isSmoking} />
+                <img src={this.props.isMale ? iconFemale : iconMale} />
             </div>
         );
     }
