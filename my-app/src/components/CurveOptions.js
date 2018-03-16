@@ -11,14 +11,15 @@ import { SLECT_SMOKING } from '../constants/actionConstants';
 import icon_smoking from '../assets/img/icons-demo/icon_smoking.png';
 import icon_female from '../assets/img/icons-demo/icon_female.png';
 import icon_male from '../assets/img/icons-demo/icon_male.png';
-import {SELECT_GENDER} from '../constants/actionConstants';
+import icon_dob from '../assets/img/icons-demo/icon_male.png';
+import { SELECT_GENDER } from '../constants/actionConstants';
 
 class CurveOptions extends Component {
     render() {
         return (
             <div>
                 <ul className="circle-container">
-                    <li><Gender/></li>
+                    <li><Gender /></li>
                     <li><MaritalStatusContainer /></li>
                     <li><DateOfBirthContainer /></li>
                     <li><KidsContainer /></li>
@@ -96,7 +97,7 @@ class GenderShow extends Component {
 
                 <div className="right-swith">
                     <label className="switch">
-                        <input type="checkbox" checked = {this.props.isMale} onChange={e => this.props.dispatch({ type: SELECT_GENDER, value: e.target.checked })} />
+                        <input type="checkbox" checked={this.props.isMale} onChange={e => this.props.dispatch({ type: SELECT_GENDER, value: e.target.checked })} />
                         <span className="slider round"></span>
                     </label>
                 </div>
@@ -109,10 +110,8 @@ class GenderShow extends Component {
     }
 }
 
-const Smoking = HOC(connect()(SmokingShow), icon_smoking, "smoking");
+const Smoking = HOC(SmokingShow, icon_smoking, "smoking");
 
-const Gender = HOC(connect()(GenderShow), icon_smoking, "gender");
-
-
+const Gender = HOC(GenderShow, icon_smoking, "gender");
 
 export default CurveOptions;

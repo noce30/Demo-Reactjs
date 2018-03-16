@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import SmokingShow from './SmokingShow';
-import { CLICK_SMOKING_ICON } from '../constants/actionConstants';
-import { SLECT_SMOKING } from '../constants/actionConstants'
 
 const HOC = (ComposedComponent, link, name) => class extends Component {
     constructor() {
