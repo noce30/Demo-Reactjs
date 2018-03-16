@@ -61,6 +61,7 @@ input:focus+.slider {
     }
     .right-swith {
         margin-top: 15px;
+        margin-right: 16px;
     }
     .left {
         float: left;
@@ -71,10 +72,10 @@ input:focus+.slider {
         color: #29317B;
         font-weight: bold;
         text-transform: uppercase;
-    }
+    }  
+}
 
-    .img-gender-container{
-        position: relative;
-        z-index: 20;
-    }
+.img-gender-container{
+    position: relative;
+    z-index: 20;
 }

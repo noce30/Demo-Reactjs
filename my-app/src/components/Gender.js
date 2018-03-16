@@ -16,8 +16,7 @@ class Gender extends Component {
             opacity: 0,        
             top: 0,  
             display: 'inline-block',
-            position: 'absolute',
-            zIndex: -20
+            position: 'absolute'          
         }
 
         const transitionStyles = {
@@ -28,6 +27,7 @@ class Gender extends Component {
         return (
             <div>
                 <img className="img-gender-container" src={icon_select_gender} alt="male" onClick={e => this.props.dispatch({ type: CLICK_GENDER_ICON, value: !this.props.showFull })} />              
+                <span className="field-info">Gender</span>
                 <Transition in={this.props.showFull} timeout={300}>
                     {state => (
                         <div

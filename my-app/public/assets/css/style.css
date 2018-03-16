@@ -199,6 +199,7 @@ input:focus + .slider {
 
 .item .right-swith {
   margin-top: 15px;
+  margin-right: 16px;
 }
 
 .item .left {
@@ -213,7 +214,7 @@ input:focus + .slider {
   text-transform: uppercase;
 }
 
-.item .img-gender-container {
+.img-gender-container {
   position: relative;
   z-index: 20;
 }
@@ -325,5 +326,9 @@ input:focus + .slider {
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
+}
+
+.smoking-height {
+  height: 70px;
 }
 /*# sourceMappingURL=style.css.map */
