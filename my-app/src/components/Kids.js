@@ -6,14 +6,12 @@ const Kids = (props) => {
 
     return (
         <div>
-            <div>
+            <div >
                 <img src={iconKid} onClick={e => props.onClickToShowSelectNumber(true)} />
-                <div>
-                    <span className="field-info">Kids</span>
-                </div>
+                <span className="field-info">Kids</span>
             </div>
             {props.isShowSelectKidsOption &&
-                <div>
+                <div >
                     <select name="kids" value={selectedNumber} onChange={e => {
                         props.onSelectKidsNumber(e.target.value)
                         props.onClickToShowSelectNumber(false)
