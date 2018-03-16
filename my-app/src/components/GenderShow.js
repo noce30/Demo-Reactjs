@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import icon_female from '../assets/img/icons-demo/icon_female.png';
 import icon_male from '../assets/img/icons-demo/icon_male.png';
 import { connect } from 'react-redux';
-<<<<<<< HEAD
 import {SELECT_GENDER} from '../constants/actionConstants';
 import icon_select_gender from "../assets/img/icons-demo/icon_select_gender.png";
-=======
-import { SELECT_GENDER } from '../constants/actionConstants'
->>>>>>> af14800e2a0dbfc6d5d29e8ace031d1a0a9fdd87
 
 class GenderShow extends Component {
     render() {
