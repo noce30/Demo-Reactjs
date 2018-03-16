@@ -9,13 +9,20 @@ import { Transition } from 'react-transition-group';
 const HOC = (ComposedComponent, link, name) => class extends Component {
     constructor() {
         super();
-        this.state = { show: false }
+        this.state = {
+            show: false,
+            width: 300
+        }
     }
 
     clickIcon() {
-        this.setState(({ show }) => ({
-            show: !show
+        this.setState(({ show, width }) => ({
+            show: !show,
+            width: show ? 300 : 0
+
         }))
+        console.log(this.state.show, this.state.width);
+
     }
 
     render() {
@@ -27,7 +34,9 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
             opacity: 0,
             top: 0,
             position: 'absolute',
-            zIndex: -20
+            zIndex: -20,
+            width: this.state.width
+
         }
 
         const transitionStyles = {
@@ -40,25 +49,28 @@ const HOC = (ComposedComponent, link, name) => class extends Component {
                 <div className="left">
                     <img src={link} alt="male" onClick={() => this.clickIcon()} />
                 </div>
-                <Transition in={this.state.show} timeout={duration}>
-                    {state => (
-                        <div
-                            style={{
-                                ...defaultStyle,
-                                ...transitionStyles[state]
-                            }}>
-                            <div className="item toogle-height" style={this.state.show ? { backgroundColor: "hotpink" } : null}>
-                                <ComposedComponent />
+                <div>
+                    <Transition in={this.state.show} timeout={duration}>
+                        {state => (
+                            <div
+                                style={{
+                                    ...defaultStyle,
+                                    ...transitionStyles[state]
+                                }}>
+                                <div className="item toogle-height" style={this.state.show ? { backgroundColor: "hotpink", width: 350 } : null}>
+                                    <ComposedComponent />
+                                </div>
                             </div>
+                        )}
+                    </Transition>
+
+                    {
+                        !this.state.show &&
+                        <div className="left text-title">
+                            {name}
                         </div>
-                    )}
-                </Transition>
-                {
-                    !this.state.show &&
-                    <div className="left text-title">
-                        {name}
-                    </div>
-                }
+                    }
+                </div>
             </div>
         );
     }
