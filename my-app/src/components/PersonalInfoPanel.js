@@ -7,10 +7,10 @@ import { connect } from "react-redux";
 
 const mockCustomer = {
     fullName: "John Doe",
-    gender: "male",
-    age: 32,
-    maritalStatus: "Single",
-    occupation: "Professional",
+    gender: ".",
+    age: 0,
+    maritalStatus: "---",
+    occupation: "---",
     expectedRetireAge: 60,
     kids: 0
 }
