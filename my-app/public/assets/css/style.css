@@ -195,7 +195,8 @@ input:focus + .slider {
   overflow: auto;
 }
 
-.item .right, .item .right-swith {
+.item .right,
+.item .right-swith {
   float: right;
 }
 
@@ -238,6 +239,12 @@ input:focus + .slider {
   position: fixed;
   height: 100%;
   width: 100%;
+}
+
+.kid-container {
+  width: 500px;
+  overflow: hidden;
+  margin-left: 10%;
 }
 
 .onoffswitch {

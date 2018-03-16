@@ -14,36 +14,34 @@ class GenderShow extends Component {
     }
 
     render() {
-        if (this.props.showFull) {
-            return (
-
+        return (
+            (this.props.showFull &&
                 <div>
                     <div className="right">
                         <img src={icon_female} alt="male" />
                     </div>
-    
                     <div className="right-swith">
                         <label className="switch">
                             <input type="checkbox" checked={this.props.checked} onChange={this.handleGender} />
                             <span className="slider round"></span>
                         </label>
                     </div>
-    
+
                     <div className="right">
                         <img src={icon_male} alt="male" />
                     </div>
                 </div>
-            );
-        }
-        else
-        {
-            return(
-                <div className="left text-title">
-                    GENDER
-                </div>
             )
-        }
-        
+        );
+        // else
+        // {
+        //     return(
+        //         <div className="left text-title">
+        //             GENDER
+        //         </div>
+        //     )
+        // }
+
     }
 }
 
