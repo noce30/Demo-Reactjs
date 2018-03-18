@@ -56,13 +56,13 @@ input:focus+.slider {
 }
 
 .item {   
-    width: 69px;    
+    width: 65px;    
     border-radius: 35px;
     overflow: hidden;
-    height: 70px;
+    height: 68px;
     transition-timing-function: ease-in-out;
-    transition: width 2s;
-    background-color: palevioletred;
+    transition: width 1s;
+    background: linear-gradient(to right, palevioletred, white);
    
     .right,
     .right-swith {
