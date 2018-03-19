@@ -261,6 +261,18 @@ input:focus + .slider {
   width: 300px;
 }
 
+.info-position div > * .title-name {
+  color: #29317b;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.info-position div > * .info-personal {
+  color: dimgray;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .main-bg {
   background-color: rgba(255, 255, 255, 0.9);
   position: fixed;

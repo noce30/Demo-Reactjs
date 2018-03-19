@@ -9,11 +9,10 @@ import { connect } from "react-redux";
 const SummaryInformation = ({ customer, isMale, isSmoking }) => {
     return (
         <div>
-            <h3 className="title-name">{isMale ? "Mr" : "Mrs"}. {customer.fullName}</h3>
-
-            <h5>{customer.age > 0 ? customer.age + ' years old' : '---'} | {customer.maritalStatus === 'Married' ? `Married with ${customer.kids} kids` : customer.maritalStatus}</h5>
-            <h5>{customer.occupation} | Expected retire age: {customer.expectedRetireAge}</h5>
-            <h5>Smoking:{isSmoking ? "Yes" : "No"}</h5>
+            <p className="title-name">{isMale ? "Mr" : "Mrs"}. {customer.fullName}</p>
+            <p className="info-personal">{customer.age > 0 ? customer.age + ' years old' : '---'} | {customer.maritalStatus === 'Married' ? `Married with ${customer.kids} kids` : customer.maritalStatus}</p>
+            <p className="info-personal">{customer.occupation} | Expected retire age: {customer.expectedRetireAge}</p>
+            <p className="info-personal">Smoking:{isSmoking ? "Yes" : "No"}</p>
         </div>
     )
 }

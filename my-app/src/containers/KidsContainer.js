@@ -5,8 +5,8 @@ import HOC from "../components/HOC";
 import icon_kids from '../assets/img/icons-demo/icon_kids.png';
 
 const numberOfKidsOptions = {
-    items: ['1', '2', '3', '4', '5', '6', 'more'],
-    selected: '1'
+    items: ['0','1', '2', '3', '4', '5', '6', 'more'],
+    selected: '0'
 }
 
 const mapStateToProps = state => ({
