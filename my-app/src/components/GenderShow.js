@@ -8,10 +8,10 @@ class GenderShow extends Component {
     render() {
         return (
             <div>
-                <div className="right">
+                <div className="right" style={!this.props.isMale ? { opacity: "0.3" } : null}>
                     <img src={icon_female} alt="male" onClick={e => this.props.dispatch({ type: SELECT_GENDER, value: true })} />
                 </div>
-                <div className="right mr-10">
+                <div className="right mr-10" style={this.props.isMale ? { opacity: "0.3" } : null}>
                     <img src={icon_male} alt="male" onClick={e => this.props.dispatch({ type: SELECT_GENDER, value: false })} />
                 </div>
             </div>
@@ -19,4 +19,9 @@ class GenderShow extends Component {
     }
 }
 
-export default connect()(GenderShow);
+const mapStateToProps = (state) => ({
+    isMale: state.gender.isMale
+})
+
+
+export default connect(mapStateToProps)(GenderShow);
